@@ -1,4 +1,7 @@
 import "./globals.css";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ weight: ["300", "600"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Open Decision",
@@ -12,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
